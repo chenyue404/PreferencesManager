@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Preferences Manager</string>
     <string name="menu">Menu</string>
+    <string name="search_hint">Search an app</string>
 </resources>

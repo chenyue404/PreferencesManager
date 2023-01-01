@@ -15,6 +15,9 @@ class MainVM : ViewModel() {
     private val _appListState = mutableStateOf<List<AppItem>>(emptyList())
     val appListState: State<List<AppItem>> = _appListState
 
+    val isSearching = mutableStateOf(false)
+    val keyword = mutableStateOf("")
+
     suspend fun readAppList(context: Context) = withContext(Dispatchers.IO) {
         val installedPackages = context.packageManager.getInstalledPackages(0)
         _appListState.value = installedPackages.map {
